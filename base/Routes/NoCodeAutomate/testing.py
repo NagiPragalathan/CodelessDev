@@ -6,7 +6,7 @@ import time
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.action_chains import ActionChains
 # import pyautogui
-import cv2
+# import cv2
 import os, json
 import sys
 import numpy as np
@@ -48,20 +48,21 @@ class Nocode_test:
         Xml_File.write(xml_format)
 
     def take_video_rec(self):
-        resolution = (1920, 1080)
-        codec = cv2.VideoWriter_fourcc(*"XVID")
-        filename = "Test_Video/Recording.avi"  # this linke take's screen_rec but the given path is already exits it's save else it's not take screenshot for example('folder/img.png') the folder if exist the screenshot will save else it's not save
-        fps = 30.0
-        out = cv2.VideoWriter(filename, codec, fps, resolution)
-        while run:
-            # img = pyautogui.screenshot()
-            # frame = np.array(img)
-            # frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            # out.write(frame)
-            if cv2.waitKey(1) == ord('q'):
-                break
-        out.release()
-        cv2.destroyAllWindows()
+        pass
+        # resolution = (1920, 1080)
+        # codec = cv2.VideoWriter_fourcc(*"XVID")
+        # filename = "Test_Video/Recording.avi"  # this linke take's screen_rec but the given path is already exits it's save else it's not take screenshot for example('folder/img.png') the folder if exist the screenshot will save else it's not save
+        # fps = 30.0
+        # out = cv2.VideoWriter(filename, codec, fps, resolution)
+        # while run:
+        #     # img = pyautogui.screenshot()
+        #     # frame = np.array(img)
+        #     # frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        #     # out.write(frame)
+        #     if cv2.waitKey(1) == ord('q'):
+        #         break
+        # out.release()
+        # cv2.destroyAllWindows()
 
 
     def action(self,element,action):
