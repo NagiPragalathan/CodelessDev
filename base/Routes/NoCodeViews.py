@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
-from ..models import Pages
+from base.models import Pages
 from django.core.serializers import serialize
 import json
 
