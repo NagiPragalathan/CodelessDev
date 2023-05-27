@@ -1,0 +1,37 @@
+{   
+    "setup":{
+        "driver_path" : "C:/Users/nagip/Desktop/New_folder/chromedriver.exe",
+        "get":"https://www.saucedemo.com/",
+        "screen_recorder":"true"
+    },
+    "login_testing":{
+        "fill_user_name" : {
+            "id" : "user-name:sk:minimize",
+            "data" : "standard_user"
+        },
+        "fill_password":{
+            "id":"password:sk",
+            "data":"secret_sauce",
+            "take":"screenshot"
+        },
+        "click_login_btn":{
+            "code":"true",
+            "id":"login-button:click",
+            "python_code_path":"C:/Users/nagip/Desktop/New_folder/main.py@under_score(10)"
+        }
+    },
+    "home_page":{
+        "set_window_position":[10,10],
+        "ls_id_clk" : ["add-to-cart-sauce-labs-backpack","add-to-cart-sauce-labs-bike-light","add-to-cart-sauce-labs-fleece-jacket"],
+        "ls_name_clk" : ["add-to-cart-test.allthethings()-t-shirt-(red)","add-to-cart-sauce-labs-bolt-t-shirt","add-to-cart-sauce-labs-onesie"]
+    },
+    "view_cart":{
+        "select_select_box":{
+            "xpath":"//*[@id='header_container']/div[2]/div[2]/span/select:select_by_index@2"   
+        },
+        "nav_to_view_cart":{
+            "xpath": "//*[@id='shopping_cart_container']/a:click:minimize",
+            "window":  "maximize"
+        }
+    }
+}

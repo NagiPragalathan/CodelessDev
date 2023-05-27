@@ -1,0 +1,6 @@
+{% extends 'NoCodeBuilderPages/base.html' %} 
+{% block content %}
+{% if page %}
+    {{page.html | safe }}
+{% endif %}
+{% endblock %}

@@ -1,0 +1,157 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href= "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="px-2 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+        <a href="#" class="flex items-center">
+            <img src="data:image/png;base64,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" class="h-6 mr-3 sm:h-10" alt="Flowbite Logo" />
+            {% comment %} <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">CodelessCrypto</span> {% endcomment %}
+        </a>
+        <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+            <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+                <a href="/home" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+            </li>
+            <li>
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Dropdown <svg class="w-4 h-4 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                <!-- Dropdown menu -->
+                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                        <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                        </li>
+                        <li aria-labelledby="dropdownNavbarLink">
+                        <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown" data-dropdown-placement="right-start" type="button" class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dropdown<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></button>
+                        <div id="doubleDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
+                                <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Overview</a>
+                                </li>
+                                <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">My downloads</a>
+                                </li>
+                                <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Billing</a>
+                                </li>
+                                <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Rewards</a>
+                                </li>
+                            </ul>
+                        </div>
+                        </li>
+                        <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                        </li>
+                    </ul>
+                    <div class="py-1">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign out</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="/view_pages" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">NoCode</a>
+            </li>
+            <li>
+                <a href="/automation" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Playground</a>
+            </li>
+            <li>
+                <a href="/list_blog" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"> list Blogs</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="p-6">
+        {% for i in blogs %}
+            <div style="    display: flex;align-items: center;justify-content: center;">
+                <h1 style="    font-weight: bold; font-size: 28px;">{{ i.0.categories }}</h1>
+                <hr style="    margin-top: 10px; margin-bottom: 15px;">
+            </div>
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+                {% for j in i %}
+                    <div class="overflow-hidden rounded-2xl bg-gray-50">
+                        <div class="flex items-center h-[180px] overflow-hidden">
+                        <img src="{{ j.blog_profile_img }}" alt="Hamburger" />
+                        </div>
+                
+                        <div class="p-6">
+                        <div class="flex flex-col items-start justify-between sm:flex-row sm:items-center">
+                            <div>
+                                <p class="text-gray-400">Category • {{ j.categories }} {{ j.id }}</p>
+                                <h2 class="mt-2 text-lg font-semibold text-gray-800">{{ j.title }}</h2>
+                            </div>
+                        </div>
+                
+                        <hr class="mt-4 mb-4" />
+                
+                        <div class="flex flex-wrap justify-between" style="    line-height: 36px;">
+                            <p class="inline-flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                
+                            <span class="ml-2 text-gray-600">{{ j.updated_date }}</span>
+                            <span class="mx-2">•</span>
+                            <span class="text-gray-400">Last Updated</span>
+                            </p>
+                            <p class="inline-flex items-center text-gray-600">
+                                <button onclick="get_blog({{ j.id }})" class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+                                    <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                        view
+                                    </span>
+                                  </button>
+                                  <button onclick="edit_blog({{ j.id }})" class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+                                    <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                        Edit
+                                    </span>
+                                  </button>
+                                  <button onclick="del({{ j.id }})" class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+                                    <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                        Delete
+                                    </span>
+                                  </button>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+    <script>
+        function del(id) {
+            $.ajax({
+                method: "get",
+                url: 'delete_blog',
+                data: {
+                    'id': id,
+                    'csrfmiddlewaretoken': $("input[name=csrfmiddlewaretoken]").val()
+                }, success: function (data) {
+                    location.reload();
+                }
+            });
+        }
+        function get_blog(id){
+            window.location.replace("view_blog/" + id)
+        }
+        function edit_blog(id){
+            window.location.replace("edit_blog/" + id)
+        }
+    </script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
+</body>
+</html>

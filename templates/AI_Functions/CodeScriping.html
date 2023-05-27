@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Get Example Code</title>
+</head>
+
+<body>
+    <div style="margin: 0 auto; margin-top: 30px; width: 600px; background-color: white;padding: 20px; ">
+        <h1 style="text-align: center;">Get Example Code</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="question">Enter a question:</label><br>
+            <input type="text" id="question" name="question"><br>
+            <br>
+            <input type="submit" value="Get Example Code">
+        </form>
+        {% if question %}
+        <h2>Question:</h2>
+        <p>{{ question }}</p>
+        {% endif %}
+        {% if link_s %}
+        <h2>Example code 1 :</h2>
+        {% endif %}
+        {% if code_s %}
+        <h2>Example Code:</h2>
+        <div>{{ code_s|safe }}</div>
+        {% endif %}
+        {% if error %}
+        <p style="color: red;">{{ error }}</p>
+        {% endif %}
+
+
+        {% if question %}
+        <h2>Question:</h2>
+        <p>{{ question }}</p>
+        {% endif %}
+        {% if link_gfg %}
+        <h2>Example code 2 :</h2>
+        {% endif %}
+        {% if code_gfg %}
+        <h2>Example Code:</h2>
+        <div>{{ code_gfg|safe }}</div>
+
+        {% endif %}
+        {% if error %}
+        <p style="color: red;">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>
