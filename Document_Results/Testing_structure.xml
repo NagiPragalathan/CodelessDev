@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<root>
+	<setup type="dict">
+		<driver_path type="str">C:/Users/nagip/Desktop/New_folder/chromedriver.exe</driver_path>
+		<get type="str">https://www.saucedemo.com/</get>
+		<screen_recorder type="str">true</screen_recorder>
+	</setup>
+	<login_testing type="dict">
+		<fill_user_name type="dict">
+			<id type="str">user-name:sk:minimize</id>
+			<data type="str">standard_user</data>
+		</fill_user_name>
+		<fill_password type="dict">
+			<id type="str">password:sk</id>
+			<data type="str">secret_sauce</data>
+			<take type="str">screenshot</take>
+		</fill_password>
+		<click_login_btn type="dict">
+			<code type="str">true</code>
+			<id type="str">login-button:click</id>
+			<python_code_path type="str">C:/Users/nagip/Desktop/New_folder/main.py@under_score(10)</python_code_path>
+		</click_login_btn>
+	</login_testing>
+	<home_page type="dict">
+		<set_window_position type="list">
+			<list_item type="int">10</list_item>
+			<list_item type="int">10</list_item>
+		</set_window_position>
+		<ls_id_clk type="list">
+			<list_item type="str">add-to-cart-sauce-labs-backpack</list_item>
+			<list_item type="str">add-to-cart-sauce-labs-bike-light</list_item>
+			<list_item type="str">add-to-cart-sauce-labs-fleece-jacket</list_item>
+		</ls_id_clk>
+		<ls_name_clk type="list">
+			<list_item type="str">add-to-cart-test.allthethings()-t-shirt-(red)</list_item>
+			<list_item type="str">add-to-cart-sauce-labs-bolt-t-shirt</list_item>
+			<list_item type="str">add-to-cart-sauce-labs-onesie</list_item>
+		</ls_name_clk>
+	</home_page>
+	<view_cart type="dict">
+		<select_select_box type="dict">
+			<xpath type="str">//*[@id='header_container']/div[2]/div[2]/span/select:select_by_index@2</xpath>
+		</select_select_box>
+		<nav_to_view_cart type="dict">
+			<xpath type="str">//*[@id='shopping_cart_container']/a:click:minimize</xpath>
+			<window type="str">maximize</window>
+		</nav_to_view_cart>
+	</view_cart>
+</root>

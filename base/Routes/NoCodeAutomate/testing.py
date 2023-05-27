@@ -7,6 +7,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.action_chains import ActionChains
 # import pyautogui
 # import cv2
+from fastapi import FastAPI, Response
 import os, json
 import sys
 import numpy as np
@@ -39,13 +40,18 @@ class Nocode_test:
 
 
     def make_xml(self,dict_data ):
-        Xml_File = open(str(os.path.abspath(os.getcwd())+"\\Document_Results\\Testing_structure.xml"),'w')
-
         my_item_func = lambda x: 'list_item'
-        xml = dicttoxml(dict_data, item_func = my_item_func)
-
+        xml = dicttoxml(dict_data, item_func=my_item_func)
         xml_format = parseString(xml).toprettyxml()
-        Xml_File.write(xml_format)
+
+        file_path = os.path.abspath(os.path.join(os.getcwd(), "Document_Results", "Testing_structure.xml"))
+
+        with open(file_path, 'w') as xml_file:
+            xml_file.write(xml_format)
+
+        response = Response(content=xml_format, media_type="application/xml")
+        response.headers["Content-Disposition"] = "attachment; filename=Testing_structure.xml"
+        return response
 
     def take_video_rec(self):
         pass

@@ -47,18 +47,18 @@ def save_edit_blog(request,pk):
 
 def list_blog(request):
     items = get_blog()
-    return render(request,"BlogBuilder/Blog.html",{'blogs':items})
+    return render(request,"BlogBuilder/blog.html",{'blogs':items})
 
 def view_blog(request,pk):
     page = Blog.objects.get(id=pk)
     items = get_blog()
-    return render(request,"BlogBuilder/view_Blog.html",{'blog':page,'item':items})
+    return render(request,"BlogBuilder/view_blog.html",{'blog':page,'item':items})
 
 def delete_blog(request):
     bl_id = request.GET.get("id")
     page = Blog.objects.get(id=bl_id)
     page.delete()
-    return render(request,"BlogBuilder/view_Blog.html",{'blog':page})
+    return render(request,"BlogBuilder/view_blog.html",{'blog':page})
 
 def list_edit_blog(request):
     items = get_blog()
