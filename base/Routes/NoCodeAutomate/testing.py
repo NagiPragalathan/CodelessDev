@@ -40,18 +40,19 @@ class Nocode_test:
 
 
     def make_xml(self,dict_data ):
-        my_item_func = lambda x: 'list_item'
-        xml = dicttoxml(dict_data, item_func=my_item_func)
-        xml_format = parseString(xml).toprettyxml()
+        pass
+        # my_item_func = lambda x: 'list_item'
+        # xml = dicttoxml(dict_data, item_func=my_item_func)
+        # xml_format = parseString(xml).toprettyxml()
 
-        file_path = os.path.abspath(os.path.join(os.getcwd(), "Document_Results", "Testing_structure.xml"))
+        # file_path = os.path.abspath(os.path.join(os.getcwd(), "Document_Results", "Testing_structure.xml"))
 
-        with open(file_path, 'w') as xml_file:
-            xml_file.write(xml_format)
+        # with open(file_path, 'w') as xml_file:
+        #     xml_file.write(xml_format)
 
-        response = Response(content=xml_format, media_type="application/xml")
-        response.headers["Content-Disposition"] = "attachment; filename=Testing_structure.xml"
-        return response
+        # response = Response(content=xml_format, media_type="application/xml")
+        # response.headers["Content-Disposition"] = "attachment; filename=Testing_structure.xml"
+        # return response
 
     def take_video_rec(self):
         pass
