@@ -65,13 +65,15 @@ AI_functions = [
 
 
 
-urlpatterns = [
+base = [
     path('admin/', admin.site.urls),
     path('', home,name='home'),
     path('about', about,name='about'),
     path('contact', contact,name='contact'),
     path('services', services,name='services'),
 ]
+
+urlpatterns.extend(Make_Join([NoCodeMaker, BlogBuilder, AI_functions]))
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
