@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
+{% load static %}
 
 <head>
 	<meta charset="utf-8">
@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>HTML Template</title>
+	<title>CodelessCrypto</title>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
@@ -18,6 +18,8 @@
 
 	<!-- Owl Carousel -->
 	<link type="text/css" rel="stylesheet" href=" {% static 'css/owl.carousel.css' %} " />
+	<link type="text/css" rel="stylesheet" href=" {% static 'css/Automation.css' %} " />
+
 	<link type="text/css" rel="stylesheet" href=" {% static 'css/owl.theme.default.css' %} " />
 
 	<!-- Magnific Popup -->
@@ -38,19 +40,25 @@
 </head>
 
 <body>
-
 	<!-- Header -->
-	<header>
+	<header id="home">
+		<!-- Background Image -->
+		<div class="bg-img"
+			style="background-image: url('https://preview.redd.it/0bb6dqsiab451.gif?s=b0c65596a54a30708da26669da6e79abf3be1680');">
+			<div class="overlay"></div>
+		</div>
+		<!-- /Background Image -->
 
 		<!-- Nav -->
-		<nav id="nav" class="navbar">
+		<nav id="nav" class="navbar nav-transparent">
 			<div class="container">
 
 				<div class="navbar-header">
 					<!-- Logo -->
 					<div class="navbar-brand">
 						<a href=" {% static 'index.html' %} ">
-							<img class="logo" src=" {% static 'img/logo.png' %} " alt="logo">
+							<img class="logo" src=" {% static 'img/logo-alt.png' %} " alt="logo">
+							<img class="logo-alt" src=" {% static 'img/logo-alt.png' %} " alt="logo">
 						</a>
 					</div>
 					<!-- /Logo -->
@@ -59,26 +67,26 @@
 					<div class="nav-collapse">
 						<span></span>
 					</div>
-					<!-- /Collapse nav button -->
+
 				</div>
 
-				<!--  Main navigation  -->
+
 				<ul class="main-nav nav navbar-nav navbar-right">
 					<li><a href="/home">Home</a></li>
 					<li><a href="/home">About</a></li>
-					
+
 					<li><a href="home">Team</a></li>
 					<li class="has-dropdown"><a>NoCode</a>
 						<ul class="dropdown">
 							<li><a href="/add"> Create Page</a></li>
 							<li><a href="/view_pages"> View templates</a></li>
 						</ul>
-					</li>	
+					</li>
 					<li class="has-dropdown"><a>Playground</a>
 						<ul class="dropdown">
 							<li><a href="/automation"> Automation</a></li>
 						</ul>
-					</li>				
+					</li>
 					<li class="has-dropdown"><a>Blog</a>
 						<ul class="dropdown">
 							<li><a href="/blog_edit"> Create Blog</a></li>
@@ -86,6 +94,22 @@
 							<li><a href="/list_blog"> list Blogs</a></li>
 						</ul>
 					</li>
+
+					<li class="has-dropdown"><a>Edit</a>
+						<ul class="dropdown">
+							<li><a href="/edits"> Edit HTML</a></li>
+							<li><a href="/url"> URL</a></li>
+							<li><a href="/autogenerate">Auto Generate</a></li>
+						</ul>
+					</li>
+
+					<li class="has-dropdown"><a>Additional</a>
+						<ul class="dropdown">
+							<li><a href="/Code_scriping"> Code Writer</a></li>
+							<li><a href="/Error_Solver"> Error Solver</a></li>
+						</ul>
+					</li>
+
 					</li>
 					<li><a href=" {% static '#contact' %} ">MarketPlace</a></li>
 				</ul>
@@ -133,7 +157,10 @@
 								<li><i class="fa fa-comments"></i>57</li>
 							</ul>
 							<h3>Morbi mattis felis at nunc. Duis viverra</h3>
-							<p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.</p>
+							<p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae,
+								eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+								Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
+								ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.</p>
 						</div>
 
 						<!-- blog tags -->
@@ -164,7 +191,8 @@
 											<a href="#"><i class="fa fa-instagram"></i></a>
 										</div>
 									</div>
-									<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
+									<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis
+										nunc sed. Nunc non blandit massa enim nec.</p>
 								</div>
 							</div>
 						</div>
@@ -180,8 +208,10 @@
 									<img class="media-object" src=" {% static './img/perso2.jpg' %} " alt="">
 								</div>
 								<div class="media-body">
-									<h4 class="media-heading">Joe Doe<span class="time">2 min ago</span><a href="#" class="reply">Reply <i class="fa fa-reply"></i></a></h4>
-									<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
+									<h4 class="media-heading">Joe Doe<span class="time">2 min ago</span><a href="#"
+											class="reply">Reply <i class="fa fa-reply"></i></a></h4>
+									<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis
+										nunc sed. Nunc non blandit massa enim nec.</p>
 								</div>
 							</div>
 							<!-- /comment -->
@@ -192,8 +222,10 @@
 									<img class="media-object" src=" {% static './img/perso1.jpg' %} " alt="">
 								</div>
 								<div class="media-body">
-									<h4 class="media-heading">Joe Doe<span class="time">2 min ago</span><a href="#" class="reply">Reply <i class="fa fa-reply"></i></a></h4>
-									<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
+									<h4 class="media-heading">Joe Doe<span class="time">2 min ago</span><a href="#"
+											class="reply">Reply <i class="fa fa-reply"></i></a></h4>
+									<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis
+										nunc sed. Nunc non blandit massa enim nec.</p>
 								</div>
 
 								<!-- author reply comment -->
@@ -202,8 +234,10 @@
 										<img class="media-object" src=" {% static './img/perso2.jpg' %} " alt="">
 									</div>
 									<div class="media-body">
-										<h4 class="media-heading">Joe Doe<span class="time">2 min ago</span><a href="#" class="reply">Reply <i class="fa fa-reply"></i></a></h4>
-										<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
+										<h4 class="media-heading">Joe Doe<span class="time">2 min ago</span><a href="#"
+												class="reply">Reply <i class="fa fa-reply"></i></a></h4>
+										<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in
+											mollis nunc sed. Nunc non blandit massa enim nec.</p>
 									</div>
 								</div>
 								<!-- /comment -->
@@ -214,8 +248,10 @@
 										<img class="media-object" src=" {% static './img/perso2.jpg' %} " alt="">
 									</div>
 									<div class="media-body">
-										<h4 class="media-heading">Joe Doe<span class="time">2 min ago</span><a href="#" class="reply">Reply <i class="fa fa-reply"></i></a></h4>
-										<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
+										<h4 class="media-heading">Joe Doe<span class="time">2 min ago</span><a href="#"
+												class="reply">Reply <i class="fa fa-reply"></i></a></h4>
+										<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in
+											mollis nunc sed. Nunc non blandit massa enim nec.</p>
 									</div>
 								</div>
 								<!-- /comment -->
@@ -230,8 +266,10 @@
 									<img class="media-object" src=" {% static './img/perso.jpg' %} " alt="">
 								</div>
 								<div class="media-body">
-									<h4 class="media-heading">Joe Doe<span class="time">2 min ago</span><a href="#" class="reply">Reply <i class="fa fa-reply"></i></a></h4>
-									<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
+									<h4 class="media-heading">Joe Doe<span class="time">2 min ago</span><a href="#"
+											class="reply">Reply <i class="fa fa-reply"></i></a></h4>
+									<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis
+										nunc sed. Nunc non blandit massa enim nec.</p>
 								</div>
 							</div>
 							<!-- /comment -->
@@ -361,7 +399,8 @@
 
 					<!-- footer logo -->
 					<div class="footer-logo">
-						<a href=" {% static 'index.html' %} "><img src=" {% static 'img/logo-alt.png' %} " alt="logo"></a>
+						<a href=" {% static 'index.html' %} "><img src=" {% static 'img/logo-alt.png' %} "
+								alt="logo"></a>
 					</div>
 					<!-- /footer logo -->
 
@@ -378,7 +417,8 @@
 
 					<!-- footer copyright -->
 					<div class="footer-copyright">
-						<p>Copyright © 2017. All Rights Reserved. Designed by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+						<p>Copyright © 2017. All Rights Reserved. Designed by <a href="https://colorlib.com"
+								target="_blank">Colorlib</a></p>
 					</div>
 					<!-- /footer copyright -->
 

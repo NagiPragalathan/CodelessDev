@@ -34,9 +34,7 @@ def Make_Join(Componets):
 # Paths.............................
 
 NoCodeMaker = [
-    path('view_pages', NoCodeViews.index, name='home'),
-    path('', common.home, name='home'),
-    path('home', common.home, name='home'),
+    path('view_pages', NoCodeViews.index, name='view_pages'),
     path('automation', common.automation, name='automation'),
     path('blog', common.blog, name='blog'),
     path('compiler', common.compiler, name='compiler'),
@@ -67,13 +65,16 @@ AI_functions = [
 
 base = [
     path('admin/', admin.site.urls),
+    path('url', NoCodeViews.url, name='url'),
+    path('Download_file', NoCodeViews.Download_file, name='Download_file'),
+    
     path('', home,name='home'),
     path('about', about,name='about'),
     path('contact', contact,name='contact'),
     path('services', services,name='services'),
 ]
 
-urlpatterns.extend(Make_Join([NoCodeMaker, BlogBuilder, AI_functions]))
+urlpatterns.extend(Make_Join([NoCodeMaker, BlogBuilder, AI_functions,base]))
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

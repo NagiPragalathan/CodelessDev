@@ -97,7 +97,6 @@
 
 					<li class="has-dropdown"><a>Edit</a>
 						<ul class="dropdown">
-							<li><a href="/edits"> Edit HTML</a></li>
 							<li><a href="/url"> URL</a></li>
 							<li><a href="/autogenerate">Auto Generate</a></li>
 						</ul>
@@ -120,7 +119,7 @@
 		<br><br>
 
 		<div class="ABC text-center">
-			<h2 class="title">Compiler
+			<h2 class="title">Autogenerate
 			</h2>
 		</div>
 		<!-- Container -->
@@ -130,12 +129,13 @@
 			<div class="row">
 
 				<div style="text-align: center;">
-					<textarea rows="60" cols="80" placeholder="Enter the Code"></textarea>
+					<form action="/autogenerate" method="post">
+						{% csrf_token %}
+						<input rows="60" name="query" id="query" cols="80" placeholder="Enter the query">
+						<input name="ProjectName" id="ProjectName" cols="80" placeholder="Enter the ProjectName">
 				</div><br>
-				<center>
-					<button class="white-btn">Run Compiler!!</button></a>
-				</center>
-
+				<input class="white-btn" type="submit" value="Download">
+				</form>
 			</div>
 			<!-- /Row -->
 

@@ -120,7 +120,7 @@
 		<br><br>
 
 		<div class="ABC text-center">
-			<h2 class="title">Compiler
+			<h2 class="title">Edit HTML
 			</h2>
 		</div>
 		<!-- Container -->
@@ -130,12 +130,13 @@
 			<div class="row">
 
 				<div style="text-align: center;">
-					<textarea rows="60" cols="80" placeholder="Enter the Code"></textarea>
+					<form action="/automation" method="post">
+						{% csrf_token %}
+						<textarea rows="60" name="text_area" id="text_area" cols="80"
+							placeholder="Enter the Code"></textarea>
 				</div><br>
-				<center>
-					<button class="white-btn">Run Compiler!!</button></a>
-				</center>
-
+				<button class="white-btn">Edit</button>
+				</form>
 			</div>
 			<!-- /Row -->
 

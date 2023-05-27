@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,7 +43,8 @@
 	<!-- Header -->
 	<header id="home">
 		<!-- Background Image -->
-		<div class="bg-img" style="background-image: url('https://preview.redd.it/0bb6dqsiab451.gif?s=b0c65596a54a30708da26669da6e79abf3be1680');">
+		<div class="bg-img"
+			style="background-image: url('https://preview.redd.it/0bb6dqsiab451.gif?s=b0c65596a54a30708da26669da6e79abf3be1680');">
 			<div class="overlay"></div>
 		</div>
 		<!-- /Background Image -->
@@ -55,7 +57,7 @@
 					<!-- Logo -->
 					<div class="navbar-brand">
 						<a href=" {% static 'index.html' %} ">
-							<img class="logo"  src=" {% static 'img/logo-alt.png' %} " alt="logo">
+							<img class="logo" src=" {% static 'img/logo-alt.png' %} " alt="logo">
 							<img class="logo-alt" src=" {% static 'img/logo-alt.png' %} " alt="logo">
 						</a>
 					</div>
@@ -65,26 +67,26 @@
 					<div class="nav-collapse">
 						<span></span>
 					</div>
-					
+
 				</div>
 
-				
+
 				<ul class="main-nav nav navbar-nav navbar-right">
 					<li><a href="/home">Home</a></li>
 					<li><a href="/home">About</a></li>
-					
+
 					<li><a href="home">Team</a></li>
 					<li class="has-dropdown"><a>NoCode</a>
 						<ul class="dropdown">
 							<li><a href="/add"> Create Page</a></li>
 							<li><a href="/view_pages"> View templates</a></li>
 						</ul>
-					</li>	
+					</li>
 					<li class="has-dropdown"><a>Playground</a>
 						<ul class="dropdown">
 							<li><a href="/automation"> Automation</a></li>
 						</ul>
-					</li>				
+					</li>
 					<li class="has-dropdown"><a>Blog</a>
 						<ul class="dropdown">
 							<li><a href="/blog_edit"> Create Blog</a></li>
@@ -92,6 +94,21 @@
 							<li><a href="/list_blog"> list Blogs</a></li>
 						</ul>
 					</li>
+
+					<li class="has-dropdown"><a>Edit</a>
+						<ul class="dropdown">
+							<li><a href="/url"> URL</a></li>
+							<li><a href="/autogenerate">Auto Generate</a></li>
+						</ul>
+					</li>
+
+					<li class="has-dropdown"><a>Additional</a>
+						<ul class="dropdown">
+							<li><a href="/Code_scriping"> Code Writer</a></li>
+							<li><a href="/Error_Solver"> Error Solver</a></li>
+						</ul>
+					</li>
+
 					</li>
 					<li><a href=" {% static '#contact' %} ">MarketPlace</a></li>
 				</ul>
@@ -110,9 +127,13 @@
 					<div class="col-md-10 col-md-offset-1">
 						<div class="home-content">
 							<h1 class="white-text">CodelessCrypto </h1>
-							<p class="white-text">Revolutionize Your Crypto Projects with Our Powerful No-Code Development Platform – Say Goodbye to Programming and Hello to Effortless Creation!!
-							</p><a href=" {% static '#about' %} ">
-							<button class="white-btn">Get Started!</button></a>
+							<p class="white-text">Revolutionize Your Crypto Projects with Our Powerful No-Code
+								Development Platform – Say Goodbye to Programming and Hello to Effortless Creation!!
+							</p>
+							<form id="metamask-form" method="POST" action="{% url 'connect_metamask' %}">
+								{% csrf_token %}
+								<button type="submit" class="white-btn" onclick="connectMetamask()">Connect
+									Metamask</button>
 						</div>
 					</div>
 					<!-- /home content -->
@@ -144,34 +165,39 @@
 
 				<!-- about -->
 				<div class="XYZ">
-				<div class="col-md-4">
-					<div class="about">
-						<i class="fa fa-cogs"></i>
-						<h3>Customizable and Flexible</h3>
-						<p>Our platform is fully customizable, allowing you to create a unique user experience for your app. Plus, our flexible architecture lets you easily integrate with other web3 tools.</p>
+					<div class="col-md-4">
+						<div class="about">
+							<i class="fa fa-cogs"></i>
+							<h3>Customizable and Flexible</h3>
+							<p>Our platform is fully customizable, allowing you to create a unique user experience for
+								your app. Plus, our flexible architecture lets you easily integrate with other web3
+								tools.</p>
+						</div>
+					</div>
+					<!-- /about -->
+
+					<!-- about -->
+					<div class="col-md-4">
+						<div class="about">
+							<i class="fa fa-magic"></i>
+							<h3>Explore Our Features!! </h3>
+							<p>Take advantage of our awesome features, from smart contract templates to built-in
+								analytics tools.</p>
+
+						</div>
+					</div>
+					<!-- /about -->
+
+					<!-- about -->
+					<div class="col-md-4">
+						<div class="about">
+							<i class="fa fa-mobile"></i>
+							<h3>Responsive and Ready </h3>
+							<p>Our platform is fully responsive, ensuring that your application looks and functions
+								flawlessly across all devices. </p>
+						</div>
 					</div>
 				</div>
-				<!-- /about -->
-
-				<!-- about -->
-				<div class="col-md-4">
-					<div class="about">
-						<i class="fa fa-magic"></i>
-						<h3>Explore Our Features!!						</h3>
-						<p>Take advantage of our awesome features, from smart contract templates to built-in analytics tools.</p>
-					
-					</div>
-				</div>
-				<!-- /about -->
-
-				<!-- about -->
-				<div class="col-md-4">
-					<div class="about">
-						<i class="fa fa-mobile"></i>
-						<h3>Responsive and Ready						</h3>
-						<p>Our platform is fully responsive, ensuring that your application looks and functions flawlessly across all devices. </p>
- 	</div>
-				</div></div>
 				<!-- /about -->
 
 			</div>
@@ -184,7 +210,7 @@
 	<!-- /About -->
 
 
-	
+
 
 	<!-- Service -->
 	<div id="service" class="section md-padding">
@@ -200,73 +226,82 @@
 					<h2 class="title">What we offer</h2>
 				</div>
 				<!-- /Section header -->
-			<div class="XYZ">
-				<!-- service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<i class="fa fa-diamond"></i>
-						<h3>Build Your Decentralized App</h3>
-						<p>Build decentralized applications without writing code using our user-friendly drag-and-drop interface. Create smart contracts, DeFi apps, NFTs, and more with ease.</p>
+				<div class="XYZ">
+					<!-- service -->
+					<div class="col-md-4 col-sm-6">
+						<div class="service">
+							<i class="fa fa-diamond"></i>
+							<h3>Build Your Decentralized App</h3>
+							<p>Build decentralized applications without writing code using our user-friendly
+								drag-and-drop interface. Create smart contracts, DeFi apps, NFTs, and more with ease.
+							</p>
+						</div>
 					</div>
-				</div>
-				<!-- /service -->
+					<!-- /service -->
 
-				<!-- service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<i class="fa fa-rocket"></i>
-						<h3>Blog</h3>
-						<p>Publish content and reach a wider audience with our blogging platform. Our user-friendly interface makes it easy to create and customize posts with no coding required.</p>
+					<!-- service -->
+					<div class="col-md-4 col-sm-6">
+						<div class="service">
+							<i class="fa fa-rocket"></i>
+							<h3>Blog</h3>
+							<p>Publish content and reach a wider audience with our blogging platform. Our user-friendly
+								interface makes it easy to create and customize posts with no coding required.</p>
+						</div>
 					</div>
-				</div>
-				<!-- /service -->
+					<!-- /service -->
 
-				<!-- service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<i class="fa fa-cogs"></i>
-						<h3>Auto-Generate HTML</h3>
-						<p>Our auto-generating feature quickly converts your designs into HTML code, saving you time and effort. Whether you're a designer or developer, this tool streamlines your workflow and helps you create high-quality web pages effortlessly.</p>
+					<!-- service -->
+					<div class="col-md-4 col-sm-6">
+						<div class="service">
+							<i class="fa fa-cogs"></i>
+							<h3>Auto-Generate HTML</h3>
+							<p>Our auto-generating feature quickly converts your designs into HTML code, saving you time
+								and effort. Whether you're a designer or developer, this tool streamlines your workflow
+								and helps you create high-quality web pages effortlessly.</p>
+						</div>
 					</div>
+
 				</div>
-				
-			</div>
 				<!-- /service -->
 				<div class="XYZ">
-				<!-- service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<i class="fa fa-cogs"></i>
-						<h3>Page Creation with No Code</h3>
-						<p> Build web pages without writing a single line of code. Our platform offers a drag-and-drop interface, making it easy for anyone to create professional-looking pages.</p>
+					<!-- service -->
+					<div class="col-md-4 col-sm-6">
+						<div class="service">
+							<i class="fa fa-cogs"></i>
+							<h3>Page Creation with No Code</h3>
+							<p> Build web pages without writing a single line of code. Our platform offers a
+								drag-and-drop interface, making it easy for anyone to create professional-looking pages.
+							</p>
+						</div>
 					</div>
-				</div>
-				
 
-				<!-- /service -->
 
-				<!-- service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<i class="fa fa-cogs"></i>
-						<h3>Compiler</h3>
-						<p> Compile smart contracts with ease using our no-code compiler. Simply input your code and let our platform do the rest.</p>
+					<!-- /service -->
+
+					<!-- service -->
+					<div class="col-md-4 col-sm-6">
+						<div class="service">
+							<i class="fa fa-cogs"></i>
+							<h3>Compiler</h3>
+							<p> Compile smart contracts with ease using our no-code compiler. Simply input your code and
+								let our platform do the rest.</p>
+						</div>
 					</div>
-				</div>
-				
 
-				<!-- /service -->
 
-				<!-- service -->
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<i class="fa fa-cogs"></i>
-						<h3>No-Code Automation</h3>
-						<p>Automate your workflow and streamline your business processes with our no-code automation tools. Build custom workflows and integrations without any coding required.</p>
+					<!-- /service -->
+
+					<!-- service -->
+					<div class="col-md-4 col-sm-6">
+						<div class="service">
+							<i class="fa fa-cogs"></i>
+							<h3>No-Code Automation</h3>
+							<p>Automate your workflow and streamline your business processes with our no-code automation
+								tools. Build custom workflows and integrations without any coding required.</p>
+						</div>
 					</div>
+
 				</div>
-				
-</div>
 				<!-- /service -->
 
 
@@ -281,18 +316,18 @@
 
 
 	<!-- Why Choose Us -->
-	
+
 
 
 	<!-- Numbers -->
-	
 
-			</div>
-			<!-- Row -->
 
-		</div>
-		<!-- /Container -->
-<!-- Team -->
+	</div>
+	<!-- Row -->
+
+	</div>
+	<!-- /Container -->
+	<!-- Team -->
 	<div id="team" class="section ma-padding">
 
 		<!-- Container -->
@@ -306,79 +341,92 @@
 					<h2 class="title">Our Team</h2>
 				</div>
 				<!-- /Section header -->
-<div class="XYZ">
-				<!-- team -->
-				<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="https://media.licdn.com/dms/image/D5603AQFHd3kG-7zwxw/profile-displayphoto-shrink_400_400/0/1672584349709?e=1683158400&v=beta&t=G_f2MimFcgtl2XKYqCD5MkBmaxulJkDzTKhvXAMKF00" alt="">
-							<div class="overlay">
-								<div class="team-social">
-									<a href="https://www.linkedin.com/in/nagi-pragalathan-n-a03a55230/"><i class="fa fa-linkedin"></i></a>
-									<a href="https://twitter.com/NagiPragalathan"><i class="fa fa-twitter"></i></a>
-									<a href="https://github.com/NagiPragalathan"><i class="fa fa-github"></i></a>
+				<div class="XYZ">
+					<!-- team -->
+					<div class="col-sm-4">
+						<div class="team">
+							<div class="team-img">
+								<img class="img-responsive"
+									src="https://media.licdn.com/dms/image/D5603AQFHd3kG-7zwxw/profile-displayphoto-shrink_400_400/0/1672584349709?e=1683158400&v=beta&t=G_f2MimFcgtl2XKYqCD5MkBmaxulJkDzTKhvXAMKF00"
+									alt="">
+								<div class="overlay">
+									<div class="team-social">
+										<a href="https://www.linkedin.com/in/nagi-pragalathan-n-a03a55230/"><i
+												class="fa fa-linkedin"></i></a>
+										<a href="https://twitter.com/NagiPragalathan"><i class="fa fa-twitter"></i></a>
+										<a href="https://github.com/NagiPragalathan"><i class="fa fa-github"></i></a>
+									</div>
 								</div>
 							</div>
+							<div class="team-content">
+								<h3>Nagi Pragalathan</h3>
+								<span>Backend Developer</span>
+							</div>
 						</div>
-						<div class="team-content">
-							<h3>Nagi Pragalathan</h3>
-							<span>Backend Developer</span>
+					</div>
+					<!-- /team -->
+
+					<!-- team -->
+					<div class="col-sm-4">
+						<div class="team">
+							<div class="team-img">
+								<img class="img-responsive"
+									src="https://avatars.githubusercontent.com/u/111880621?s=400&u=30361bfbe9bc8d836b3aefdd9733f8d18ec0416f&v=4"
+									alt="">
+								<div class="overlay">
+									<div class="team-social">
+										<a href="https://www.linkedin.com/in/prashant-d-7a3915249/"><i
+												class="fa fa-linkedin"></i></a>
+										<a href="https://twitter.com/prashantdp7"><i class="fa fa-twitter"></i></a>
+										<a href="https://github.com/prashantexe"><i class="fa fa-github"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="team-content">
+								<h3>D Prashant</h3>
+								<span>Front-end Dev & UI/UX Designer</span>
+							</div>
+						</div>
+					</div>
+					<!-- /team -->
+
+					<!-- team -->
+					<div class="col-sm-4">
+						<div class="team">
+							<div class="team-img">
+								<img class="img-responsive"
+									src="https://media.licdn.com/dms/image/C5603AQEisaLkTowmJQ/profile-displayphoto-shrink_400_400/0/1663343489211?e=1683158400&v=beta&t=0ogYAo_3TEaKgq4ED3jrx2Dbp6Cl05kSwJLzfDWKy4k"
+									alt="">
+								<div class="overlay">
+									<div class="team-social">
+										<a href="https://www.linkedin.com/in/ravindran-s-b-51b54a243/"><i
+												class="fa fa-linkedin"></i></a>
+
+										<a href="https://github.com/sbravindran03"><i class="fa fa-github"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="team-content">
+								<h3>Ravidran</h3>
+								<span>Front-end Developer</span>
+							</div>
 						</div>
 					</div>
 				</div>
 				<!-- /team -->
 
-				<!-- team -->
-				<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="https://avatars.githubusercontent.com/u/102911214?v=4" alt="">
-							<div class="overlay">
-								<div class="team-social">
-									<a href="https://www.linkedin.com/in/karthik-s-9a6121237/"><i class="fa fa-linkedin"></i></a>
-									<a href="https://twitter.com/karthik08917385"><i class="fa fa-twitter"></i></a>
-									<a href="https://github.com/karthik242002"><i class="fa fa-github"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>Karthik.S</h3>
-							<span>content Developer/web designer</span>
-						</div>
-					</div>
-				</div>
-				<!-- /team -->
-
-				<!-- team -->
-				<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="https://media.licdn.com/dms/image/C5603AQEisaLkTowmJQ/profile-displayphoto-shrink_400_400/0/1663343489211?e=1683158400&v=beta&t=0ogYAo_3TEaKgq4ED3jrx2Dbp6Cl05kSwJLzfDWKy4k" alt="">
-							<div class="overlay">
-								<div class="team-social">
-									<a href="https://www.linkedin.com/in/ravindran-s-b-51b54a243/"><i class="fa fa-linkedin"></i></a>
-									
-									<a href="https://github.com/sbravindran03"><i class="fa fa-github"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>Ravidran</h3>
-							<span>Front-end Developer</span>
-						</div>
-					</div>
-				</div></div>
-				<!-- /team -->
-				
 				<!-- /team -->
 				<!-- team -->
 				<div class="col-sm-4">
 					<div class="team">
 						<div class="team-img">
-							<img class="img-responsive" src="https://media.licdn.com/dms/image/D4E03AQGyjZQF7IRrHA/profile-displayphoto-shrink_400_400/0/1666232367008?e=1683158400&v=beta&t=NR7KaWCc0knCCJSgivK__3wrXJlaG_N_s0BFT1HPsuM" alt="">
+							<img class="img-responsive"
+								src="https://media.licdn.com/dms/image/D4E03AQGyjZQF7IRrHA/profile-displayphoto-shrink_400_400/0/1666232367008?e=1683158400&v=beta&t=NR7KaWCc0knCCJSgivK__3wrXJlaG_N_s0BFT1HPsuM"
+								alt="">
 							<div class="overlay">
 								<div class="team-social">
-									<a href="https://www.linkedin.com/in/mani-kandan-1b0846248/"><i class="fa fa-linkedin"></i></a>
+									<a href="https://www.linkedin.com/in/mani-kandan-1b0846248/"><i
+											class="fa fa-linkedin"></i></a>
 									<a href="https://github.com/manikandan"><i class="fa fa-github"></i></a>
 								</div>
 							</div>
@@ -388,19 +436,20 @@
 							<span>Backend developer</span>
 						</div>
 					</div>
-				</div></div>
-				<!-- /team -->
-
+				</div>
 			</div>
-			<!-- /Row -->
+			<!-- /team -->
 
 		</div>
-		<!-- /Container -->
+		<!-- /Row -->
+
+	</div>
+	<!-- /Container -->
 
 	</div>
 	<!-- /Team -->
 
-	
+
 
 	<!-- Contact -->
 	<div id="contact" class="section md-padding">
@@ -410,44 +459,45 @@
 
 			<!-- Row -->
 			<div class="row">
-			
+
 				<!-- Section-header -->
 				<div class="section-header text-center">
 					<h2 class="title">Get in touch</h2>
 				</div>
 				<!-- /Section-header -->
-			
+
 				<!-- contact -->
 				<div class="XYZ">
-				<div class="col-sm-4">
-					<div class="contact">
-						<i class="fa fa-phone"></i>
-						<h3>Phone</h3>
-						<p>512-421-3940</p>
+					<div class="col-sm-4">
+						<div class="contact">
+							<i class="fa fa-phone"></i>
+							<h3>Phone</h3>
+							<p>512-421-3940</p>
+						</div>
+					</div>
+					<!-- /contact -->
+
+					<!-- contact -->
+					<div class="col-sm-4">
+						<div class="contact">
+							<i class="fa fa-envelope"></i>
+							<h3>Email</h3>
+							<p>email@support.com</p>
+						</div>
+					</div>
+					<!-- /contact -->
+
+					<!-- contact -->
+					<div class="col-sm-4">
+						<div class="contact">
+							<i class="fa fa-map-marker"></i>
+							<h3>Address</h3>
+							<p>1739 Bubby Drive</p>
+						</div>
 					</div>
 				</div>
 				<!-- /contact -->
 
-				<!-- contact -->
-				<div class="col-sm-4">
-					<div class="contact">
-						<i class="fa fa-envelope"></i>
-						<h3>Email</h3>
-						<p>email@support.com</p>
-					</div>
-				</div>
-				<!-- /contact -->
-
-				<!-- contact -->
-				<div class="col-sm-4">
-					<div class="contact">
-						<i class="fa fa-map-marker"></i>
-						<h3>Address</h3>
-						<p>1739 Bubby Drive</p>
-					</div>
-				</div></div>
-				<!-- /contact -->
-				
 				<!-- contact form -->
 				<div class="col-md-8 col-md-offset-2">
 					<form class="contact-form">
@@ -483,7 +533,8 @@
 
 					<!-- footer logo -->
 					<div class="footer-logo">
-						<a href=" {% static 'index.html' %} "><img src=" {% static 'img/logo-alt.png' %} " alt="logo"></a>
+						<a href=" {% static 'index.html' %} "><img src=" {% static 'img/logo-alt.png' %} "
+								alt="logo"></a>
 					</div>
 					<!-- /footer logo -->
 
@@ -491,7 +542,8 @@
 					<ul class="footer-follow">
 						<li><a href="https://twitter.com/NagiPragalathan"><i class="fa fa-twitter"></i></a></li>
 						<li><a href="https://github.com/NagiPragalathan"><i class="fa fa-github"></i></a></li>
-						<li><a href="https://www.linkedin.com/in/nagi-pragalathan-n-a03a55230/"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/nagi-pragalathan-n-a03a55230/"><i
+									class="fa fa-linkedin"></i></a></li>
 						<li><a href="https://www.youtube.com/@gryffindorsguild"><i class="fa fa-youtube"></i></a></li>
 					</ul>
 					<!-- /footer follow -->
@@ -529,11 +581,45 @@
 	<!-- /Preloader -->
 
 	<!-- jQuery Plugins -->
+	<script src="https://cdn.jsdelivr.net/npm/web3@1.4.0/dist/web3.min.js"></script>
+
 	<script type="text/javascript" src=" {% static 'js/jquery.min.js' %} "></script>
 	<script type="text/javascript" src=" {% static 'js/bootstrap.min.js' %} "></script>
 	<script type="text/javascript" src=" {% static 'js/owl.carousel.min.js' %} "></script>
 	<script type="text/javascript" src=" {% static 'js/jquery.magnific-popup.js' %} "></script>
 	<script type="text/javascript" src=" {% static 'js/main.js' %} "></script>
+
+
+	<script>
+		var web3 = new Web3(window.ethereum);
+
+		async function connectMetamask() {
+
+			try {
+				// Prompt user to connect their Metamask wallet
+				await window.ethereum.enable();
+
+				const web3 = new Web3(window.ethereum);
+				// Retrieve the user's Ethereum address
+				var accounts = await web3.eth.getAccounts();
+				var userAddress = accounts[0];
+				var csrftoken = Cookies.get('csrftoken');
+				console.log(userAddress)
+				// Send the Ethereum address to the Django backend using an AJAX request
+				$.ajax({
+					url: "{% url 'connect_metamask' %}",
+					type: 'get',
+					data: { 'address': userAddress },
+					success: function (response) {
+						console.log(response);
+					}
+				});
+			} catch (error) {
+				console.log(error);
+			}
+		}
+
+	</script>
 
 </body>
 
