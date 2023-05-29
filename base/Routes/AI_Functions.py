@@ -30,7 +30,7 @@ def Code_scriping(request):
                 context['error'] = 'No Stack Overflow link found for the given question'
         else:
             context['error'] = 'Please enter a question'
-    return render(request,  'CodeScriping.html', context)
+    return render(request,  'AI_Functions/CodeScriping.html', context)
 
 
 def Error_Solver(request):
@@ -61,4 +61,4 @@ def Error_Solver(request):
                 context['error'] = 'No Stack Overflow link found for the given question'
         else:
             context['error'] = 'Please enter a question'
-    return render(request,  'Error_Solver.html', context)
+    return render(request,  'AI_Functions/Error_Solver.html', context)

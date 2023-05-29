@@ -9,6 +9,7 @@ def blog_edit(request):
     return render(request,"BlogBuilder/blog_edit.html")
 
 def save_blog(request):
+    obj= len(Blog.objects.all())
     ids = ['#title','#description','#content','#Category','#Thumbnail']
     title = request.POST.get(ids[0])
     description = request.POST.get(ids[1])
@@ -16,12 +17,11 @@ def save_blog(request):
     Category = request.POST.get(ids[3])
     Thumbnail = request.POST.get(ids[4])
 
-    obj = Blog(title=title,description=description,content=content,categories=Category,blog_profile_img=Thumbnail)
+    obj = Blog(id=obj+1,title=title,description=description,content=content,categories=Category,blog_profile_img=Thumbnail)
     obj.save()
     ob = Blog.objects.all()
     for i in ob:
         print(i.blog_profile_img,i.title,i.content)
-
     return render(request,"BlogBuilder/blog_edit.html")
 
 def save_edit_blog(request,pk):
@@ -47,6 +47,11 @@ def save_edit_blog(request,pk):
 
 def list_blog(request):
     items = get_blog()
+    print(items)
+    for i in items:
+        print(i)
+        for j in i:
+            print(j.title,j.id)
     return render(request,"BlogBuilder/blog.html",{'blogs':items})
 
 def view_blog(request,pk):

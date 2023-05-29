@@ -7,6 +7,7 @@ from ...models import Blog
 
 def get_blog():
     images = Blog.objects.all()
+    print(images)
     cat = []
     temp = []
     items = []

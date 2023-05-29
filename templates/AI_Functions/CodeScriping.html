@@ -19,42 +19,43 @@
                 <input type="text" id="question" name="question" class="w-full px-4 py-2 border border-gray-300 rounded-lg mb-4" placeholder="Enter a question"><br>
                 <input type="submit" value="Get Example Code" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 cursor-pointer">
             </form>
-            
-            {% if question %}
-            <h2>Question:</h2>
-            <p>{{ question }}</p>
-            {% endif %}
-            
-            {% if link_s %}
-            <h2>Example code 1 :</h2>
-            {% endif %}
-            
-            {% if code_s %}
-            <h2>Example Code:</h2>
-            <div>{{ code_s|safe }}</div>
-            {% endif %}
-            
-            {% if error %}
-            <p style="color: red;">{{ error }}</p>
-            {% endif %}
-            
-            {% if question %}
-            <h2>Question:</h2>
-            <p>{{ question }}</p>
-            {% endif %}
-            
-            {% if link_gfg %}
-            <h2>Example code 2 :</h2>
-            {% endif %}
-            
-            {% if code_gfg %}
-            <h2>Example Code:</h2>
-            <div>{{ code_gfg|safe }}</div>
-            {% endif %}
-            
-            {% if error %}
-            <p style="color: red;">{{ error }}</p>
-            {% endif %}
+            <div>
+                {% if question %}
+                <h2>Question:</h2>
+                <p>{{ question }}</p>
+                {% endif %}
+                
+                {% if link_s %}
+                <h2>Example code 1 :</h2>
+                {% endif %}
+                
+                {% if code_s %}
+                <h2>Example Code:</h2>
+                <div>{{ code_s|safe }}</div>
+                {% endif %}
+                
+                {% if error %}
+                <p style="color: red;">{{ error }}</p>
+                {% endif %}
+                
+                {% if question %}
+                <h2>Question:</h2>
+                <p>{{ question }}</p>
+                {% endif %}
+                
+                {% if link_gfg %}
+                <h2>Example code 2 :</h2>
+                {% endif %}
+                
+                {% if code_gfg %}
+                <h2>Example Code:</h2>
+                <div>{{ code_gfg|safe }}</div>
+                {% endif %}
+                
+                {% if error %}
+                <p style="color: red;">{{ error }}</p>
+                {% endif %}
+            </div>
         </div>
     </div>
     
