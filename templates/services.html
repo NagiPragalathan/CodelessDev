@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
+    {% load static %}
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>NoCode Tool</title>
+    <title>Nocode</title>
 
     <!-- Favicon -->
     <link rel="icon" href=" {% static 'img/core-img/favicon.ico' %} ">
@@ -65,75 +65,29 @@
                                     <li><a href=" {% static 'portfolio.html' %} ">Pages</a>
                                         <ul class="dropdown">
                                             <li><a href=" {% static 'index.html' %} ">Home</a></li>
-                                            <li><a href=" {% static 'about.html' %} ">About Us</a></li>
-                                            <li><a href=" {% static 'services.html' %} ">Services</a>
+                                            <li><a href=" {% static 'about.html' %} ">Dowmload Temp</a></li>
+                                            <li><a href=" {% static 'services.html' %} ">Nocode</a>
                                                 <ul class="dropdown">
-                                                    <li><a href=" {% static 'index.html' %} ">Home</a></li>
-                                                    <li><a href=" {% static 'about.html' %} ">About Us</a></li>
-                                                    <li><a href=" {% static 'services.html' %} ">Services</a></li>
-                                                    <li><a href=" {% static 'portfolio.html' %} ">Portfolio</a>
-                                                        <ul class="dropdown">
-                                                            <li><a href=" {% static 'index.html' %} ">Home</a></li>
-                                                            <li><a href=" {% static 'about.html' %} ">About Us</a></li>
-                                                            <li><a href=" {% static 'services.html' %} ">Services</a></li>
-                                                            <li><a href=" {% static 'portfolio.html' %} ">Portfolio</a></li>
-                                                            <li><a href=" {% static 'contact.html' %} ">Contact</a></li>
-                                                            <li><a href=" {% static 'elements.html' %} ">Elements</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href=" {% static 'contact.html' %} ">Contact</a></li>
-                                                    <li><a href=" {% static 'elements.html' %} ">Elements</a></li>
+                                                    <li><a href=" {% static 'index.html' %} ">Create</a></li>
+                                                    <li><a href=" {% static 'about.html' %} ">List</a></li>
+                                                    <li><a href=" {% static 'services.html' %} ">Manage</a></li>
+                    
+                                                   
                                                 </ul>
                                             </li>
-                                            <li><a href=" {% static 'portfolio.html' %} ">Portfolio</a></li>
-                                            <li><a href=" {% static 'contact.html' %} ">Contact</a></li>
-                                            <li><a href=" {% static 'elements.html' %} ">Elements</a></li>
+                                            <li><a href=" {% static 'portfolio.html' %} ">Blogs</a></li>
+                                            <li><a href=" {% static 'contact.html' %} ">Admin</a></li>
+                                            <li><a href=" {% static 'elements.html' %} ">Code Snippers</a></li>
                                         </ul>
-                                    </li>
-                                    <li><a href="#">Mega</a>
-                                        <div class="megamenu">
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href=" {% static 'index.html' %} ">Home</a></li>
-                                                <li><a href=" {% static 'about.html' %} ">About Us</a></li>
-                                                <li><a href=" {% static 'services.html' %} ">Services</a></li>
-                                                <li><a href=" {% static 'portfolio.html' %} ">Portfolio</a></li>
-                                                <li><a href=" {% static 'contact.html' %} ">Contact</a></li>
-                                                <li><a href=" {% static 'elements.html' %} ">Elements</a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href=" {% static 'index.html' %} ">Home</a></li>
-                                                <li><a href=" {% static 'about.html' %} ">About Us</a></li>
-                                                <li><a href=" {% static 'services.html' %} ">Services</a></li>
-                                                <li><a href=" {% static 'portfolio.html' %} ">Portfolio</a></li>
-                                                <li><a href=" {% static 'contact.html' %} ">Contact</a></li>
-                                                <li><a href=" {% static 'elements.html' %} ">Elements</a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href=" {% static 'index.html' %} ">Home</a></li>
-                                                <li><a href=" {% static 'about.html' %} ">About Us</a></li>
-                                                <li><a href=" {% static 'services.html' %} ">Services</a></li>
-                                                <li><a href=" {% static 'portfolio.html' %} ">Portfolio</a></li>
-                                                <li><a href=" {% static 'contact.html' %} ">Contact</a></li>
-                                                <li><a href=" {% static 'elements.html' %} ">Elements</a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href=" {% static 'index.html' %} ">Home</a></li>
-                                                <li><a href=" {% static 'about.html' %} ">About Us</a></li>
-                                                <li><a href=" {% static 'services.html' %} ">Services</a></li>
-                                                <li><a href=" {% static 'portfolio.html' %} ">Portfolio</a></li>
-                                                <li><a href=" {% static 'contact.html' %} ">Contact</a></li>
-                                                <li><a href=" {% static 'elements.html' %} ">Elements</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
+    
                                     <li><a href=" {% static 'contact.html' %} ">Contact</a></li>
                                 </ul>
 
                                 <!-- Top Social Info -->
                                 <div class="top-social-info ml-5">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-whatsapp"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-whatsapp"></i></a>
                                     <a href="#"><i class="fa fa-instagram"></i></a>
                                     <a href="#"><i class="fa fa-linkedin"></i></a>
                                     <a href="#"><i class="fa fa-pinterest"></i></a>
@@ -166,7 +120,7 @@
     <div class="services-catagory-area d-flex flex-wrap">
         <!-- Single Service Catagory -->
         <div class="single-service-cata bg-img d-flex align-items-center justify-content-center jarallax" style="background-image: url( {% static 'img/bg-img/19.jpg' %} );">
-            <a href="#">VR / AR</a>
+            <a href="#">NoCode Webdevelopment</a>
         </div>
         <!-- Single Service Catagory -->
         <div class="single-service-cata bg-img d-flex align-items-center justify-content-center jarallax" style="background-image: url( {% static 'img/bg-img/20.jpg' %} );">
@@ -187,21 +141,21 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-service-block mb-100 wow fadeInUp" data-wow-delay="100ms">
                         <h4>vision</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, elit pulvinar interdum dapibus, est dui convallis orci, vel gravida erat ante in sapien.</p>
+                        <p>No-code development vision: Empower individuals to create software without coding, democratize access to technology, drive innovation, and foster collaboration for faster and more flexible application development.</p>
                     </div>
                 </div>
                 <!-- Single Service Block -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-service-block mb-100 wow fadeInUp" data-wow-delay="300ms">
                         <h4>future</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, elit pulvinar interdum dapibus, est dui convallis orci, vel gravida erat ante in sapien.</p>
+                        <p>No-code development's future is bright. Adoption will rise, platforms will advance, and collaboration will be emphasized. It will integrate with coding, focus on specific domains, and offer automation. Mobile app development will be simplified, and training will improve. In summary, no-code development will democratize software creation.</p>
                     </div>
                 </div>
                 <!-- Single Service Block -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-service-block mb-100 wow fadeInUp" data-wow-delay="500ms">
                         <h4>intelligence</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, elit pulvinar interdum dapibus, est dui convallis orci, vel gravida erat ante in sapien.</p>
+                        <p>No-code development simplifies software creation for non-coders using pre-built components and visual interfaces. It incorporates intelligence through automation and AI/ML features but has limitations for complex applications.</p>
                     </div>
                 </div>
             </div>
@@ -390,7 +344,7 @@
                         <div class="col-sm-4">
                             <div class="single-footer-widget mb-100">
                                 <h5 class="widget-title">Address</h5>
-                                <p>Jaya Engineering College <br>Thiruninravur, Chennai</p>
+                                <p>Jaya Engineering College<br>Thiruninravur,Chennai</p>
                             </div>
                         </div>
 

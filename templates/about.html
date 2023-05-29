@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-{% load static %}
-
+    {% load static %}
 
 <head>
     <meta charset="UTF-8">
@@ -13,7 +10,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>No Code Tool</title>
+    <title>Nocode Tool</title>
 
     <!-- Favicon -->
     <link rel="icon" href=" {% static 'img/core-img/favicon.ico' %} ">
@@ -68,75 +65,29 @@
                                     <li><a href=" {% static 'portfolio.html' %} ">Pages</a>
                                         <ul class="dropdown">
                                             <li><a href=" {% static 'index.html' %} ">Home</a></li>
-                                            <li><a href=" {% static 'about.html' %} ">About Us</a></li>
-                                            <li><a href=" {% static 'services.html' %} ">Services</a>
+                                            <li><a href=" {% static 'about.html' %} ">Dowmload Temp</a></li>
+                                            <li><a href=" {% static 'services.html' %} ">Nocode</a>
                                                 <ul class="dropdown">
-                                                    <li><a href=" {% static 'index.html' %} ">Home</a></li>
-                                                    <li><a href=" {% static 'about.html' %} ">About Us</a></li>
-                                                    <li><a href=" {% static 'services.html' %} ">Services</a></li>
-                                                    <li><a href=" {% static 'portfolio.html' %} ">Portfolio</a>
-                                                        <ul class="dropdown">
-                                                            <li><a href=" {% static 'index.html' %} ">Home</a></li>
-                                                            <li><a href=" {% static 'about.html' %} ">About Us</a></li>
-                                                            <li><a href=" {% static 'services.html' %} ">Services</a></li>
-                                                            <li><a href=" {% static 'portfolio.html' %} ">Portfolio</a></li>
-                                                            <li><a href=" {% static 'contact.html' %} ">Contact</a></li>
-                                                            <li><a href=" {% static 'elements.html' %} ">Elements</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href=" {% static 'contact.html' %} ">Contact</a></li>
-                                                    <li><a href=" {% static 'elements.html' %} ">Elements</a></li>
+                                                    <li><a href=" {% static 'index.html' %} ">Create</a></li>
+                                                    <li><a href=" {% static 'about.html' %} ">List</a></li>
+                                                    <li><a href=" {% static 'services.html' %} ">Manage</a></li>
+                    
+                                                   
                                                 </ul>
                                             </li>
-                                            <li><a href=" {% static 'portfolio.html' %} ">Portfolio</a></li>
-                                            <li><a href=" {% static 'contact.html' %} ">Contact</a></li>
-                                            <li><a href=" {% static 'elements.html' %} ">Elements</a></li>
+                                            <li><a href=" {% static 'portfolio.html' %} ">Blogs</a></li>
+                                            <li><a href=" {% static 'contact.html' %} ">Admin</a></li>
+                                            <li><a href=" {% static 'elements.html' %} ">Code Snippers</a></li>
                                         </ul>
-                                    </li>
-                                    <li><a href="#">Mega</a>
-                                        <div class="megamenu">
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href=" {% static 'index.html' %} ">Home</a></li>
-                                                <li><a href=" {% static 'about.html' %} ">About Us</a></li>
-                                                <li><a href=" {% static 'services.html' %} ">Services</a></li>
-                                                <li><a href=" {% static 'portfolio.html' %} ">Portfolio</a></li>
-                                                <li><a href=" {% static 'contact.html' %} ">Contact</a></li>
-                                                <li><a href=" {% static 'elements.html' %} ">Elements</a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href=" {% static 'index.html' %} ">Home</a></li>
-                                                <li><a href=" {% static 'about.html' %} ">About Us</a></li>
-                                                <li><a href=" {% static 'services.html' %} ">Services</a></li>
-                                                <li><a href=" {% static 'portfolio.html' %} ">Portfolio</a></li>
-                                                <li><a href=" {% static 'contact.html' %} ">Contact</a></li>
-                                                <li><a href=" {% static 'elements.html' %} ">Elements</a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href=" {% static 'index.html' %} ">Home</a></li>
-                                                <li><a href=" {% static 'about.html' %} ">About Us</a></li>
-                                                <li><a href=" {% static 'services.html' %} ">Services</a></li>
-                                                <li><a href=" {% static 'portfolio.html' %} ">Portfolio</a></li>
-                                                <li><a href=" {% static 'contact.html' %} ">Contact</a></li>
-                                                <li><a href=" {% static 'elements.html' %} ">Elements</a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href=" {% static 'index.html' %} ">Home</a></li>
-                                                <li><a href=" {% static 'about.html' %} ">About Us</a></li>
-                                                <li><a href=" {% static 'services.html' %} ">Services</a></li>
-                                                <li><a href=" {% static 'portfolio.html' %} ">Portfolio</a></li>
-                                                <li><a href=" {% static 'contact.html' %} ">Contact</a></li>
-                                                <li><a href=" {% static 'elements.html' %} ">Elements</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
+    
                                     <li><a href=" {% static 'contact.html' %} ">Contact</a></li>
                                 </ul>
 
                                 <!-- Top Social Info -->
                                 <div class="top-social-info ml-5">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                                    <a href="#"><i class="fa fa-flickr"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-whatsapp"></i></a>
                                     <a href="#"><i class="fa fa-instagram"></i></a>
                                     <a href="#"><i class="fa fa-linkedin"></i></a>
                                     <a href="#"><i class="fa fa-pinterest"></i></a>
@@ -172,10 +123,9 @@
 
         <!-- Feature Content -->
         <div class="feature-content">
-            <h1>NoCode Tool</h1>
+            <h1>Nocode Tool</h1>
             <p>We are team No Coder. We developed the platform NoCode which is helps to No-code tools are software platforms or applications that allow users to build and create functional software applications, websites, or other digital solutions without the need for traditional programming or coding skills. These tools typically feature intuitive visual interfaces, drag-and-drop functionality, and pre-built components or templates that enable users to design, develop, and deploy applications with minimal technical knowledge.
-
-                No-code tools provide a simplified development experience, making it accessible to a broader audience, including entrepreneurs, designers, business professionals, and individuals with limited coding expertise. These tools abstract complex coding processes, enabling users to focus on the visual and functional aspects of their projects. </p>
+                No-code tools provide a simplified development experience, making it accessible to a broader audience, including entrepreneurs, designers, business professionals, and individuals with limited coding expertise. These tools abstract complex coding processes, enabling users to focus on the visual and functional aspects of their projects.</p>
             <a href="#" class="btn pixel-btn mt-15">CONTINUE READING</a>
         </div>
     </section>
@@ -301,18 +251,19 @@
                         <div class="hover-text d-flex align-items-end justify-content-center text-center">
                             <div class="hover--">
                                 <h4>Ganesh</h4>
-                                <h6>FrontEnd Developer</h6>
+                                <h6>Frontend Developer</h6>
                                 <div class="social-info">
-                                    <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="https://github.com/GaneshMumbai2001"><i class="fa fa-github" aria-hidden="true"></i></a>
+                                    <a href="https://www.linkedin.com/in/ganesh-mumbai-b863a3203"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                    <a href="https://twitter.com/ganesh__mumbai?t=JwSmlCKf5RWpAcMI3IB3zA&s=09"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="https://instagram.com/ganeshmumbaiofficial?igshid=NTc4MTIwNjQ2YQ=="><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    <a href="https://www.facebook.com/ganesh.mumbai.12?mibextid=ZbWKwL"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <!-- Single Team Member -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-team-member mb-100">
@@ -333,8 +284,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Single Team Member -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-team-member mb-100">
                         <img src=" {% static 'img/bg-img/67.jpg' %} " alt="">
@@ -342,7 +291,7 @@
                         <div class="hover-text d-flex align-items-end justify-content-center text-center">
                             <div class="hover--">
                                 <h4>Kalpana</h4>
-                                <h6>Content Creator</h6>
+                                <h6>Content Developer</h6>
                                 <div class="social-info">
                                     <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
                                     <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
@@ -372,7 +321,7 @@
                             <img src=" {% static 'img/bg-img/61.jpg' %} " alt="">
                             <h4>Nagi Pragalathan</h4>
                             <span>Backend Developer</span>
-                            <h5>"Building the foundations of seamless functionality" </h5>
+                            <h5>"Building the foundations of seamless functionality"</h5>
                         </div>
 
                         <!-- Single Slide -->
@@ -380,7 +329,7 @@
                             <img src=" {% static 'img/bg-img/62.jpg' %} " alt="">
                             <h4>Ganesh</h4>
                             <span>Frontend Developer</span>
-                            <h5>"Crafting Engaging User Experiences with Frontend Wizardry" </h5>
+                            <h5>"Crafting Engaging User Experiences with Frontend Wizardry"</h5>
                         </div>
 
                         <!-- Single Slide -->
@@ -388,17 +337,16 @@
                             <img src=" {% static 'img/bg-img/60.jpg' %} " alt="">
                             <h4>Sanjay</h4>
                             <span>Designer</span>
-                            <h5>"Bringing Imagination to Life through Design" </h5>
+                            <h5>"Bringing Imagination to Life through Design"</h5>
                         </div>
 
                         <!-- Single Slide -->
                         <div class="single-testimonial-slide">
                             <img src=" {% static 'img/bg-img/66.jpg' %} " alt="">
                             <h4>Kalpana</h4>
-                            <span>Content Creator</span>
+                            <span>Content Developer</span>
                             <h5>"Creating Content That Inspires and Delights"</h5>
                         </div>
-
                     </div>
                 </div>
             </div>
