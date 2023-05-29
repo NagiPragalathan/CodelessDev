@@ -75,24 +75,24 @@ WSGI_APPLICATION = 'TechSpeak.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        'CLIENT': {
-            
-            'host': "mongodb+srv://nagi:nagi@cluster0.ohv5gsc.mongodb.net/nagidb",
-            'name':'TechSpeak',
-            'authMechanism': "SCRAM-SHA-1",
-        }
-    }
-}
+#DATABASES = {
+ #   'default': {
+  #      'ENGINE': 'djongo',
+   #     'CLIENT': {
+    #        
+     #       'host': "mongodb+srv://nagi:nagi@cluster0.ohv5gsc.mongodb.net/nagidb",
+      #      'name':'TechSpeak',
+       #     'authMechanism': "SCRAM-SHA-1",
+        #}
+   # }
+#}
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': 'mydatabase.sqlite3',
-#     }
-# }
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': 'mydatabase.sqlite3',
+     }
+ }
 
 
 
