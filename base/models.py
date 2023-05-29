@@ -8,6 +8,7 @@ class Pages(models.Model):
     description = models.CharField(max_length=100)
     html = models.TextField()
     css = models.TextField()
+    image = models.CharField(max_length=50)
     preview_link = models.TextField()
 
 class Blog(models.Model):

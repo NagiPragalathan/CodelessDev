@@ -18,7 +18,7 @@ from django.urls import path
 from base.Routes.views import home, about, contact, services
 from django.conf.urls.static import static
 from TechSpeak import settings
-from base.Routes import NoCodeViews, BlogViews, common, AI_Functions
+from base.Routes import NoCodeViews, BlogViews, common, AI_Functions, bot
 
 urlpatterns = []
 
@@ -44,19 +44,20 @@ NoCodeMaker = [
 ]
 
 BlogBuilder = [
-    path('list_blog', BlogViews.list_blog),
-    path('list_edit_blog', BlogViews.list_edit_blog),
+    path('list_blog', BlogViews.list_blog,name="list_blog"),
+    path('list_edit_blog', BlogViews.list_edit_blog,name="list_edit_blog"),
     path('view_blog/<str:pk>', BlogViews.view_blog),
     path('edit_blog/<str:pk>', BlogViews.edit_blog),
-    path('blog_edit', BlogViews.blog_edit),
+    path('blog_edit', BlogViews.blog_edit,name="blog_edit"),
     path('save_blog', BlogViews.save_blog),
     path('delete_blog', BlogViews.delete_blog),
     path('edit_blog/save_edit_blog/<int:pk>', BlogViews.save_edit_blog),
 ]
 
 AI_functions = [
-    path('Code_scriping', AI_Functions.Code_scriping),
-    path('Error_Solver', AI_Functions.Error_Solver),
+    path('Code_scriping', AI_Functions.Code_scriping,name="Code_scriping"),
+    path('Error_Solver', AI_Functions.Error_Solver,name="Error_Solver"),
+    path('autogenerate', NoCodeViews.autogenerate, name='autogenerate'),
 ]
 
 
@@ -70,6 +71,9 @@ base = [
     path('about', about,name='about'),
     path('contact', contact,name='contact'),
     path('services', services,name='services'),
+    
+    path('chatbot_res',bot.chatbot_res,name="chatbot_res"),
+    
 ]
 
 urlpatterns.extend(Make_Join([NoCodeMaker, BlogBuilder, AI_functions,base]))

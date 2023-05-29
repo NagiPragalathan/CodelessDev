@@ -9,8 +9,26 @@ import io
 from django.http import FileResponse
 from django.shortcuts import render, HttpResponse
 from bs4 import BeautifulSoup
+import random
+from .Auto_generate_html import MakeWeb
 
 # Create your views here.
+def random_image():
+    # URL of website with SVG images
+    url = "https://www.google.com/search?q=nocode+svg+images&tbm=isch&ved=2ahUKEwj0j47uy6v-AhVc1HMBHQtXBaYQ2-cCegQIABAA&oq=nocode+svg+images&gs_lcp=CgNpbWcQAzoKCAAQigUQsQMQQzoHCAAQigUQQzoFCAAQgARQrQNYjAtgyw1oAHAAeACAAacCiAHoC5IBBTAuNC40mAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=73A6ZLTcItyoz7sPi66VsAo&bih=760&biw=1536&rlz=1C1RXQR_enIN1038IN1038"
+    # Make a GET request to the URL and get the HTML content
+    response = requests.get(url)
+    html_content = response.content
+
+    # Parse the HTML content using BeautifulSoup
+    soup = BeautifulSoup(html_content, 'html.parser')
+    image_urls = set()
+    for img in soup.find_all('img'):
+        img_url = img.get('src')
+        if img_url:
+            image_urls.add(img_url)
+
+    return random.choice(list(image_urls))
 
 def index(request):
     pages = Pages.objects.all()
@@ -23,7 +41,9 @@ def savePage(request):
     if(request.method=='POST'):
         html = request.POST['html']
         css = request.POST['css']
-        page = Pages.objects.create(name="untitled", html=html, css=css)
+        Project_name = request.POST['Project_name']
+        page = Pages.objects.create(
+            name=Project_name, html=html, css=css, image=random_image())
         page.save()
         # return redirect("http://localhost:3000/")
     return JsonResponse({ "result" : (json.loads(serialize('json', [page])))[0]}) 
@@ -97,3 +117,25 @@ def Download_file(request):
     return render(request, 'common/URL.html')
 
 
+def autogenerate(request):
+    if request.method == 'POST':
+        query = request.POST.get('query')
+        ProjectName = request.POST.get('ProjectName')
+        print(query, ProjectName)
+        a = MakeWeb(query, ProjectName)
+        print("connected..........")
+        code = a.create_page()
+        print("buffering.....")
+        buffer = io.BytesIO()
+        buffer.write(code.encode('utf-8'))
+        buffer.seek(0)
+        # Generate a file name for the minified HTML file
+        filename = 'Generated_code.html'
+
+        # Create a FileResponse object with the minified HTML data and the specified filename
+        response = FileResponse(
+            buffer, as_attachment=True, filename=filename)
+
+        return response
+    return render(request, 'common/Autogenerate.html')
+ 

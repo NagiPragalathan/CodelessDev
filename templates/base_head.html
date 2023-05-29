@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Nocode Tool</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href=" {% static 'img/core-img/favicon.ico' %} ">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href=" {% static 'style.css' %} ">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="pixel-main-menu" id="sticker">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container-fluid">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="pixelNav">
+
+                        <!-- Nav brand -->
+                        <a href=" {% static 'index.html' %} " class="nav-brand"><img src=" {% static 'img/core-img/logo.png' %} " alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href=" {% url 'home' %} ">Home</a></li>
+                                    <li><a href=" {% url 'about' %} ">About</a></li>
+                                    <li><a href=" {% url 'services' %} ">Services</a></li>
+                                    <li><a >Features</a>
+                                        <ul class="dropdown">
+                                            <li><a href=" {% url 'home' %} ">Home</a></li>
+                                            <li><a href=" {% url 'url' %} ">Dowmload Temp</a></li>
+                                            <li><a href=" {% url 'services' %} ">Nocode</a>
+                                                <ul class="dropdown">
+                                                    <li><a href=" {% url 'addpage' %} ">Create</a></li>
+                                                    <li><a href=" {% url 'view_pages' %} ">List</a></li>
+                                                    <li><a href=" {% url 'view_pages' %} ">Manage</a></li>
+                    
+                                                   
+                                                </ul>
+                                            </li>
+                                            <li><a>Blogs</a></li>
+                                            <li><a href=" {% url 'contact' %} ">Admin</a></li>
+                                            <li><a>Code Snippers</a></li>
+                                        </ul>
+    
+                                    <li><a href=" {% url 'contact' %} ">Contact</a></li>
+                                </ul>
+
+                                <!-- Top Social Info -->
+                                <div class="top-social-info ml-5">
+                                    <a href="https://github.com/GaneshMumbai2001"><i class="fa fa-github"></i></a>
+                                    <a href="https://www.linkedin.com/in/ganesh-mumbai-b863a3203"><i class="fa fa-linkedin"></i></a>
+                                    <a href="https://twitter.com/ganesh__mumbai?t=JwSmlCKf5RWpAcMI3IB3zA&s=09"><i class="fa fa-twitter"></i></a>
+                                    <a href="https://www.facebook.com/ganesh.mumbai.12?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://instagram.com/ganeshmumbaiofficial?igshid=NTc4MTIwNjQ2YQ=="><i class="fa fa-instagram"></i></a>
+                                    <a href="https://wa.me/+916383328121"><i class="fa fa-whatsapp"></i></a>
+                                </div>
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+
+    {% block content %}
+    {% endblock %}
+
+<!-- ##### Footer Area Start ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src=" {% static 'js/jquery/jquery-2.2.4.min.js' %} "></script>
+    <!-- Popper js -->
+    <script src=" {% static 'js/bootstrap/popper.min.js' %} "></script>
+    <!-- Bootstrap js -->
+    <script src=" {% static 'js/bootstrap/bootstrap.min.js' %} "></script>
+    <!-- All Plugins js -->
+    <script src=" {% static 'js/plugins/plugins.js' %} "></script>
+    <!-- Active js -->
+    <script src=" {% static 'js/active.js' %} "></script>
+</body>
+
+</html>
