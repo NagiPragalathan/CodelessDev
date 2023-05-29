@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
-<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
 <style>
   /* Glass theme styles */
@@ -14,7 +13,7 @@
 
   /* Custom styling */
   .jumbotron {
-    background-image: url('https://csshint.com/wp-content/uploads/2020/01/CSS-Animated-Backgrounds.gif');
+    background-image: url('https://www.eyetrodigital.com/wp-content/uploads/2023/01/AI-Technology-Creation-Concept.gif');
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -22,58 +21,69 @@
     align-items: center;
     justify-content: center;
   }
+  .form-textarea {
+    @apply bg-white bg-opacity-90 border-none rounded-md p-2 mb-2 w-full h-32 resize-none shadow-sm transition duration-300;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 
+  .form-textarea:hover {
+    @apply bg-white;
+  }
+
+  .form-textarea:focus {
+    @apply outline-none bg-white shadow-md;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
   .form-container {
     max-width: 400px;
     padding: 20px;
   }
 
   .form-input {
-    background-color: rgba(255, 255, 255, 0.9);
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
-    width: 100%;
+    @apply bg-white bg-opacity-90 border-none rounded-md p-2 mb-2 w-full shadow-sm transition duration-300;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
   }
 
   .form-input:hover {
-    background-color: rgba(255, 255, 255, 1);
+    @apply bg-white;
   }
 
   .form-input:focus {
-    outline: none;
-    background-color: rgba(255, 255, 255, 1);
+    @apply outline-none bg-white shadow-md;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
   .form-submit {
-    background-color: #3182CE;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    @apply bg-blue-500 text-white border-none rounded-md p-2 w-full cursor-pointer transition duration-300;
   }
 
   .form-submit:hover {
-    background-color: #2C5282;
+    @apply bg-blue-600;
   }
 </style>
 
 <!-- Jumbotron -->
 <div class="jumbotron">
-  <div class="glass form-container">
-<form method="post" action="{% url 'gethtml' %}">
-    {% csrf_token %}
-    <input type="text" name="text_input" placeholder="Enter your text">
-    <button type="submit">Submit</button>
-  </form>
-</div>
+  <div class="glass form-container" style="width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  background-color:rgb(255 255 255 / 26%);">
+    <form method="post" action="{% url 'gethtml' %}" style="display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;">
+      {% csrf_token %}
+      <textarea style="    width: 198%;
+      height: 163px;" name="text_input" placeholder="Enter your text" class="form-textarea p-2 border border-gray-300 rounded-lg"></textarea>
+<button type="submit" class="form-submit px-4 py-2 mt-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg">Submit</button>
+
+    </form>
+  </div>
 </div>
 <!-- Jumbotron -->
 {% endblock %}

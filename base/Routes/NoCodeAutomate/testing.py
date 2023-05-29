@@ -34,9 +34,10 @@ class Nocode_test:
                 if p is not None:
                     return p
     def make_dict_to_table(self,input):
-        html_File = open(str(os.path.abspath(os.getcwd())+"\\Document_Results\\Table_structure.html"),'w')
-        html_format = json2html.convert(json = input)
-        html_File.write(html_format)
+        pass
+        # html_File = open(str(os.path.abspath(os.getcwd())+"\\Document_Results\\Table_structure.html"),'w')
+        # html_format = json2html.convert(json = input)
+        # html_File.write(html_format)
 
 
     def make_xml(self,dict_data ):
@@ -91,9 +92,10 @@ class Nocode_test:
         # Create required folders
         folders = ['Test_Video','ScreenShots','Document_Results']
         try :
-            for i in folders:
-                current_path = os.path.join("/".join(os.path.dirname(os.path.abspath(__file__)).split("/")[:-1]),i)
-                os.mkdir(current_path)
+            # for i in folders:
+            #     current_path = os.path.join("/".join(os.path.dirname(os.path.abspath(__file__)).split("/")[:-1]),i)
+            #     os.mkdir(current_path)
+            pass
         except:
             print('files alresdy exists')
         global run
@@ -248,8 +250,8 @@ class Nocode_test:
                                         else:
                                             execute = open(i.get('python_code_path'),'r')
                                     exec(execute,{'driver':driver})
-                                if i.get('take') == "screenshot" :
-                                    driver.save_screenshot('ScreenShots/pic.png') # this linke take's screenshot but the given path is already exits it's save else it's not take screenshot for example('folder/img.png') the folder if exist the screenshot will save else it's not save
+                                # if i.get('take') == "screenshot" :
+                                #     driver.save_screenshot('ScreenShots/pic.png') # this linke take's screenshot but the given path is already exits it's save else it's not take screenshot for example('folder/img.png') the folder if exist the screenshot will save else it's not save
                 except BaseException as e:
                     if sys.argv[0] == 'Debug=true':
                         # print("".join(traceback.format_exception(e)).strip())
