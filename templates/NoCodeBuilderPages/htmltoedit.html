@@ -4363,11 +4363,11 @@
     }
   });
   const id = "{{ page.id }}";
-  if (id) {
-    const html = `{{ page.html|safe }}`
+  if (1==1) {
+    const html = `{{ page|safe }}`
     const css = `{{ page.css|safe }}`
     editor.setComponents(html)
-    {% comment %} editor.setStyle(css) {% endcomment %}
+    editor.setStyle(css)
   }
   editor.Panels.addPanel({
     id: "panel-top",

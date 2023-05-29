@@ -68,14 +68,13 @@
 <!-- Jumbotron -->
 <div class="jumbotron">
   <div class="glass form-container">
-    <form action="/autogenerate" method="post">
+    <form action="/autogenerate_edit" method="post">
       {% csrf_token %}
       <input rows="60" name="query" id="query" class="form-input" placeholder="Enter the query">
       <input name="ProjectName" id="ProjectName" class="form-input" placeholder="Enter the ProjectName">
-      <input class="form-submit" type="submit" value="Download">
+      <input class="form-submit" type="submit" value="Generate and edit">
     </form>
   </div>
 </div>
 <!-- Jumbotron -->
-
 {% endblock %}

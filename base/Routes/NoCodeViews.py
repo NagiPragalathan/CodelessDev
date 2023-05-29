@@ -50,8 +50,16 @@ def savePage(request):
 
 def editPage(request, id):
     page = Pages.objects.get(pk=id)
+    
     return render(request, 'NoCodeBuilderPages/index.html', {"page": page})
 
+def HTML_Edit(request):
+    if request.method == 'POST':
+        text_input = request.POST.get('text_input')
+        return render(request, 'NoCodeBuilderPages/htmltoedit.html', {'page': text_input})
+    else:
+        return render(request, 'NoCodeBuilderPages/get_html.html')
+    
 def editPageContent(request, id):
     if(request.method=='POST'):
         html = request.POST['html']
@@ -138,4 +146,16 @@ def autogenerate(request):
 
         return response
     return render(request, 'common/Autogenerate.html')
+ 
+ 
+def autogenerate_edit(request):
+    if request.method == 'POST':
+        query = request.POST.get('query')
+        ProjectName = request.POST.get('ProjectName')
+        print(query, ProjectName)
+        a = MakeWeb(query, ProjectName)
+        print("connected..........")
+        code = a.create_page()
+        return render(request, 'NoCodeBuilderPages/htmltoedit.html', {'page': code})
+    return render(request, 'NoCodeBuilderPages/Autogenerate1.html')
  

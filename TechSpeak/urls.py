@@ -74,6 +74,9 @@ base = [
     
     path('chatbot_res',bot.chatbot_res,name="chatbot_res"),
     
+    path('gethtml',NoCodeViews.HTML_Edit,name="gethtml"),
+    path('autogenerate_edit',NoCodeViews.autogenerate_edit,name="autogenerate_edit"),
+    
 ]
 
 urlpatterns.extend(Make_Join([NoCodeMaker, BlogBuilder, AI_functions,base]))

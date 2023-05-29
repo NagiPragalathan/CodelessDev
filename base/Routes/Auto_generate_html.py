@@ -124,7 +124,7 @@ class MakeWeb:
         return extracted_content
 
     def Fetch_the_HTag_Content(self, query, num_results, find_element):
-        search_urls = list(search(query, num_results=6))
+        search_urls = list(search(query, num_results=3))
         extracted_content = []
         try:
             for url in search_urls:
